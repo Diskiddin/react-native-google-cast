@@ -101,6 +101,7 @@ public class GoogleCastModule extends ReactContextBaseJavaModule implements Life
                 WritableMap singleDevice = Arguments.createMap();
                 singleDevice.putString("id", existingChromecasts.getId());
                 singleDevice.putString("name", existingChromecasts.getName());
+                singleDevice.putString("modelName", existingChromecasts.getDescription());
                 devicesList.pushMap(singleDevice);
             }
             promise.resolve(devicesList);

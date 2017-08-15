@@ -139,6 +139,7 @@ RCT_REMAP_METHOD(getDevices,
       GCKDevice *device = self.currentDevices[key];
       singleDevice[@"id"] = key;
       singleDevice[@"name"] = device.friendlyName;
+      singleDevice[@"modelName"] = device.modelName;
       [devicesList addObject:singleDevice];
   }
     resolve(devicesList);
